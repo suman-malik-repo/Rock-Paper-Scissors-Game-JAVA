@@ -1,11 +1,7 @@
 import java.util.*;
 public class RockPaperScissors {
     public static void options(){
-        System.out.println("Press 1 for Rock...");
-        System.out.println("Press 2 for Paper...");
-        System.out.println("Press 3 for Scissors...");
-        System.out.println("Press 0 for EXIT...");
-        System.out.print("Enter The Number>> ");
+        System.out.println("Press 1 for Rock...\nPress 2 for Paper...\nPress 3 for Scissors\nPress 0 for EXIT...\nEnter the Number>>> ");
     }
     public static void print(int a, int b){
         System.out.println("..........(System: "+a+")....."+"(User: "+b+")...........");
@@ -26,6 +22,14 @@ public class RockPaperScissors {
             }
             else if (input == 0) {
                 print(sysScore,userScore);
+                if(sysScore>userScore){
+                    System.out.println("Ohh!!! you loss the Game");
+                } else if (sysScore < userScore) {
+                    System.out.println("Yah!!! You WON the Game");
+                }
+                else{
+                    System.out.println("It's a DRAW match");
+                }
                 break;
             }
             else if((num==input-1) || (num==input+2)){
